@@ -4,7 +4,6 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import { ExternalLink, Feather, Flame, Play } from "lucide-react";
 import Panel from "./Panel";
-import NewsletterForm from "./NewsletterForm";
 import { XLogo, TelegramLogo } from "./icons";
 import heroCity from "@/assets/hero-city.jpg";
 import { siteConfig } from "@/lib/site-config";
@@ -113,17 +112,8 @@ export default function TokenDashboard() {
             </div>
           </Panel>
 
-          {/* Panel 5 — Newsletter */}
-          <Panel index={4}>
-            <PanelHeading>Never Miss A Scene</PanelHeading>
-            <p className="mt-3 font-mono text-xs leading-relaxed text-foreground/60">
-              Get updates, alpha drops and behind the scenes.
-            </p>
-            <NewsletterForm />
-          </Panel>
-
-          {/* Panel 6 — Trailer thumbnail */}
-          <Panel index={5} className="p-0 overflow-hidden">
+          {/* Panel 5 — Trailer thumbnail */}
+          <Panel index={4} className="p-0 overflow-hidden">
             <button
               type="button"
               onClick={openTrailer}

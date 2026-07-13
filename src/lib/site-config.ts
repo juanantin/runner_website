@@ -34,11 +34,6 @@ export const siteConfig = {
     telegram: "https://t.me/vladrunner_portal",
   },
 
-  // TODO: wire this up to a real email provider (Mailchimp, Beehiiv,
-  // ConvertKit, a Next.js route handler, etc). Currently a no-op that
-  // just validates client-side and shows a toast.
-  newsletterEndpoint: "/api/newsletter",
-
   copyrightYear: 2026,
 } as const;
 

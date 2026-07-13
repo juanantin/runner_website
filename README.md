@@ -41,9 +41,9 @@ src/
     globals.css        # theme tokens + scanline/grain/neon/CRT effects
   components/
     Header.tsx, Logo.tsx, icons.tsx
-    Hero.tsx, HeroBackdrop.tsx, NetworkStatus.tsx, ContractCopy.tsx
+    Hero.tsx, NetworkStatus.tsx, ContractCopy.tsx
     CreditsSection.tsx, NarrativeColumn.tsx
-    TokenDashboard.tsx, Panel.tsx, NewsletterForm.tsx
+    TokenDashboard.tsx, Panel.tsx
     TrailerModal.tsx, Toast.tsx
     Footer.tsx
     ScanlineOverlay.tsx, FilmGrainOverlay.tsx
@@ -64,7 +64,6 @@ Everything that needs to change before launch is centralized in
 | Trailer video | `trailerVideoUrl` | Leave empty to show the "Coming Soon" placeholder in the modal; set to an MP4 URL to embed a real `<video>`. |
 | Explorer link | `explorerLink` | Block explorer token page. |
 | Social links | `social.x`, `social.telegram` | Used in the header, footer, and dashboard panel. |
-| Newsletter endpoint | `newsletterEndpoint` | `NewsletterForm.tsx` POSTs `{ email }` as JSON here. Currently a placeholder path (`/api/newsletter`) with no backend — wire it up to a real provider (Mailchimp, Beehiiv, ConvertKit, a Next.js route handler, etc). The form doesn't currently fail loudly if the request 404s, since there's nothing behind it yet. |
 
 ## Art direction / assets
 
