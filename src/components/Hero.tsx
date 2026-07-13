@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Play } from "lucide-react";
 import heroCity from "@/assets/hero-city.jpg";
+import logoMark from "@/assets/logo-mark.png";
 import ContractCopy from "./ContractCopy";
 import NetworkStatus from "./NetworkStatus";
 import { siteConfig } from "@/lib/site-config";
@@ -75,10 +76,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="font-display flex flex-col text-7xl leading-[0.85] font-black tracking-wide italic sm:text-8xl md:text-9xl"
           >
-            <span className="scanline-text text-glow-orange">VLAD</span>
-            <span className="scanline-text text-glow-lime">RUNNER</span>
+            <Image
+              src={logoMark}
+              alt="Vlad Runner"
+              priority
+              className="h-auto w-full max-w-md drop-shadow-[0_0_20px_rgba(182,255,60,0.3)] sm:max-w-lg md:max-w-xl"
+            />
           </motion.h1>
 
           <motion.p
