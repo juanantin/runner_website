@@ -1,0 +1,117 @@
+// Central place for the placeholder values called out in the brief.
+// Swap these for real values before launch — nothing else in the
+// component tree needs to change.
+export const siteConfig = {
+  name: "Vlad Runner",
+  ticker: "$RUNNER",
+  tagline: "THE FUTURE IS HOODED.",
+  network: "LIVE ON ROBINHOOD CHAIN",
+
+  // TODO: replace with the real deployed contract address.
+  contractAddress: "0xVLAD...RUNNER",
+  contractAddressFull:
+    "0xVLAD0000000000000000000000000000000RUNNER",
+
+  // TODO: point at the live DEX/aggregator swap link.
+  buyLink: "#buy",
+
+  // TODO: point at the final cut once it's edited.
+  trailerVideoUrl: "",
+
+  // TODO: point at the real block explorer token page.
+  explorerLink: "#",
+
+  tokenInfo: {
+    name: "Vlad Runner",
+    ticker: "$RUNNER",
+    supply: "1,000,000,000",
+    tax: "0/0",
+    liquidity: "Burnt",
+  },
+
+  social: {
+    // TODO: replace with the real X (Twitter) profile.
+    x: "https://x.com/",
+    // TODO: replace with the real Telegram invite link.
+    telegram: "https://t.me/",
+  },
+
+  // TODO: wire this up to a real email provider (Mailchimp, Beehiiv,
+  // ConvertKit, a Next.js route handler, etc). Currently a no-op that
+  // just validates client-side and shows a toast.
+  newsletterEndpoint: "/api/newsletter",
+
+  copyrightYear: 2026,
+} as const;
+
+export const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Story", href: "#story" },
+  { label: "Tokenomics", href: "#tokenomics" },
+] as const;
+
+export const narrativeColumns = [
+  {
+    title: "THE WORLD",
+    lines: [
+      "The year is 2049.",
+      "Markets aren't run by people anymore.",
+      "They're ruled by invisible algorithms, dark pools, AI market makers, and institutions that see every move before you make it.",
+      "Retail was never supposed to win.",
+    ],
+  },
+  {
+    title: "THE LEGEND",
+    lines: [
+      "They called him Vlad.",
+      "Some saw a CEO. Some saw a villain. Others saw the man who accidentally created a generation of traders.",
+      "But legends aren't remembered for what they did.",
+      "They're remembered for what they started.",
+      "The Hood became bigger than the man.",
+    ],
+  },
+  {
+    title: "THE MISSION",
+    lines: [
+      "VLAD RUNNER isn't another token.",
+      "It's the blockbuster where retail gets top billing.",
+      "The old market had Hollywood.",
+      "Crypto has VLAD RUNNER.",
+    ],
+  },
+  {
+    title: "THE ENEMY",
+    lines: [
+      "The suits.",
+      "The gatekeepers.",
+      "The market makers.",
+      "The insiders.",
+      "The ones who always arrive before everyone else.",
+      "Until now.",
+    ],
+  },
+  {
+    title: "THE HERO",
+    lines: [
+      "No chosen one.",
+      "No VC.",
+      "No institution.",
+      "Just anonymous traders wearing the Hood.",
+      "Running toward the volatility everyone else fears.",
+    ],
+  },
+  {
+    title: "THE FUTURE",
+    lines: [
+      "This is more than a token.",
+      "It's a movement.",
+      "It's a movie.",
+      "It's history in the making.",
+      "Welcome to VLAD RUNNER.",
+      "THE FUTURE IS HOODED.",
+    ],
+  },
+] as const;
+
+export const disclaimer =
+  "$RUNNER is a community-driven meme token created for entertainment. Nothing on this website constitutes financial advice.";
