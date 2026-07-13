@@ -90,17 +90,6 @@ export default function Hero() {
             {siteConfig.tagline}
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-            className="mt-5 max-w-lg font-mono text-sm leading-relaxed text-foreground/80 sm:text-base"
-          >
-            A meme token on Robinhood Chain. By the people. For the people.
-            <br />
-            We don&rsquo;t chase the system. We run it.
-          </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
