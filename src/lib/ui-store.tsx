@@ -12,9 +12,6 @@ import {
 type ToastState = { id: number; message: string } | null;
 
 type UIContextValue = {
-  trailerOpen: boolean;
-  openTrailer: () => void;
-  closeTrailer: () => void;
   toast: ToastState;
   showToast: (message: string) => void;
 };
@@ -22,12 +19,8 @@ type UIContextValue = {
 const UIContext = createContext<UIContextValue | null>(null);
 
 export function UIProvider({ children }: { children: ReactNode }) {
-  const [trailerOpen, setTrailerOpen] = useState(false);
   const [toast, setToast] = useState<ToastState>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const openTrailer = useCallback(() => setTrailerOpen(true), []);
-  const closeTrailer = useCallback(() => setTrailerOpen(false), []);
 
   const showToast = useCallback((message: string) => {
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -36,9 +29,7 @@ export function UIProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <UIContext.Provider
-      value={{ trailerOpen, openTrailer, closeTrailer, toast, showToast }}
-    >
+    <UIContext.Provider value={{ toast, showToast }}>
       {children}
     </UIContext.Provider>
   );

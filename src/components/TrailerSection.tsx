@@ -6,7 +6,10 @@ import { siteConfig } from "@/lib/site-config";
 
 export default function TrailerSection() {
   return (
-    <section className="relative border-b border-lime-400/10 py-16 sm:py-20">
+    <section
+      id="trailer"
+      className="relative scroll-mt-16 border-b border-lime-400/10 py-16 sm:py-20"
+    >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <motion.p
           initial={{ opacity: 0, y: 12 }}

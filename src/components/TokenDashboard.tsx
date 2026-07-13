@@ -1,13 +1,10 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Image from "next/image";
-import { ExternalLink, Feather, Flame, Play } from "lucide-react";
+import { ExternalLink, Feather, Flame } from "lucide-react";
 import Panel from "./Panel";
 import { XLogo, TelegramLogo } from "./icons";
-import heroCity from "@/assets/hero-city.jpg";
 import { siteConfig } from "@/lib/site-config";
-import { useUI } from "@/lib/ui-store";
 
 function PanelHeading({ children }: { children: ReactNode }) {
   return (
@@ -18,8 +15,6 @@ function PanelHeading({ children }: { children: ReactNode }) {
 }
 
 export default function TokenDashboard() {
-  const { openTrailer } = useUI();
-
   return (
     <section
       id="tokenomics"
@@ -33,7 +28,7 @@ export default function TokenDashboard() {
           Everything You Need To Run With The Hood
         </h2>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {/* Panel 1 — Built on */}
           <Panel index={0}>
             <PanelHeading>Built On</PanelHeading>
@@ -110,37 +105,6 @@ export default function TokenDashboard() {
                 <TelegramLogo className="h-[18px] w-[18px]" />
               </a>
             </div>
-          </Panel>
-
-          {/* Panel 5 — Trailer thumbnail */}
-          <Panel index={4} className="p-0 overflow-hidden">
-            <button
-              type="button"
-              onClick={openTrailer}
-              aria-label="Watch official trailer"
-              className="group relative flex h-full min-h-[220px] w-full flex-col items-center justify-center gap-3 p-6"
-            >
-              <Image
-                src={heroCity}
-                alt=""
-                fill
-                sizes="(min-width: 1024px) 33vw, 100vw"
-                className="object-cover object-[38%_30%] transition-transform duration-300 group-hover:scale-105"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-void/20"
-              />
-              <span className="glow-pulse-box float-slow relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-lime-400/55 bg-void/60 text-lime-400 transition-transform group-hover:scale-110">
-                <Play className="ml-1 h-5 w-5" fill="currentColor" />
-              </span>
-              <span className="relative z-10 font-mono text-xs tracking-[0.25em] text-foreground/70 uppercase">
-                Official Trailer
-              </span>
-              <span className="font-display text-glow-orange relative z-10 text-xl font-bold italic">
-                Watch Now
-              </span>
-            </button>
           </Panel>
         </div>
       </div>

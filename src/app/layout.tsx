@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, IBM_Plex_Mono } from "next/font/google";
 import { UIProvider } from "@/lib/ui-store";
-import TrailerModal from "@/components/TrailerModal";
 import Toast from "@/components/Toast";
 import ScanlineOverlay from "@/components/ScanlineOverlay";
 import FilmGrainOverlay from "@/components/FilmGrainOverlay";
@@ -76,7 +75,6 @@ export default function RootLayout({
       >
         <UIProvider>
           {children}
-          <TrailerModal />
           <Toast />
         </UIProvider>
         <ScanlineOverlay />

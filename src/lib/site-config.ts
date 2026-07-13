@@ -38,6 +38,7 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Home", href: "#home" },
+  { label: "Trailer", href: "#trailer" },
   { label: "Story", href: "#story" },
   { label: "Tokenomics", href: "#tokenomics" },
 ] as const;
