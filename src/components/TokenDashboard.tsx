@@ -1,10 +1,12 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { ExternalLink, Feather, Flame, Play } from "lucide-react";
 import Panel from "./Panel";
 import NewsletterForm from "./NewsletterForm";
 import { XLogo, TelegramLogo } from "./icons";
+import heroCity from "@/assets/hero-city.jpg";
 import { siteConfig } from "@/lib/site-config";
 import { useUI } from "@/lib/ui-store";
 
@@ -128,15 +130,18 @@ export default function TokenDashboard() {
               type="button"
               onClick={openTrailer}
               aria-label="Watch official trailer"
-              className="group relative flex h-full min-h-[220px] w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-hood-900 via-void-raised to-void p-6"
+              className="group relative flex h-full min-h-[220px] w-full flex-col items-center justify-center gap-3 p-6"
             >
+              <Image
+                src={heroCity}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 33vw, 100vw"
+                className="object-cover object-[38%_30%] transition-transform duration-300 group-hover:scale-105"
+              />
               <div
                 aria-hidden="true"
-                className="absolute inset-0 opacity-40 mix-blend-screen"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle at 70% 30%, rgba(255,106,43,0.35), transparent 55%)",
-                }}
+                className="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-void/20"
               />
               <span className="border-glow-lime relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-void/60 text-lime-400 transition-transform group-hover:scale-110">
                 <Play className="ml-1 h-5 w-5" fill="currentColor" />

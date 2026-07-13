@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Play } from "lucide-react";
-import HeroBackdrop from "./HeroBackdrop";
+import heroCity from "@/assets/hero-city.jpg";
 import ContractCopy from "./ContractCopy";
 import NetworkStatus from "./NetworkStatus";
 import { siteConfig } from "@/lib/site-config";
@@ -19,7 +20,6 @@ export default function Hero() {
   });
 
   const citySlow = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
-  const figureFast = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
   const fogDrift = useTransform(scrollYProgress, [0, 1], ["0%", "6%"]);
   const contentFade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
@@ -29,29 +29,40 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-[85vh] items-center overflow-hidden border-b border-lime-400/10 pt-16"
     >
-      <motion.div style={{ y: citySlow }} className="absolute inset-0">
-        <HeroBackdrop />
+      {/* Background plate: rainy cyberpunk skyline + hooded protagonist */}
+      <motion.div style={{ y: citySlow }} className="absolute inset-0 scale-110">
+        <Image
+          src={heroCity}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[72%_center] sm:object-[62%_center] lg:object-[50%_center]"
+        />
       </motion.div>
 
+      {/* Legibility scrims over the photo plate */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-r from-void via-void/70 to-void/10 sm:from-void sm:via-void/50 sm:to-transparent"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-t from-void via-void/10 to-void/50"
+      />
       <motion.div
         style={{ y: fogDrift }}
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-hood-950/80 to-transparent blur-2xl"
       />
-
-      <motion.div
-        style={{ y: figureFast }}
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
+        className="rain-layer pointer-events-none absolute inset-0 opacity-20"
       />
 
-      {/* Neon signage — kept clear of the title column, over the skyline/figure */}
-      <div className="font-display text-glow-orange absolute top-[42%] right-[6%] hidden -rotate-3 text-base font-bold tracking-widest italic opacity-90 md:block lg:top-[46%] lg:right-[10%] lg:text-lg">
-        WALL STREET
-        <br />
-        IS OBSOLETE
-      </div>
-      <div className="font-display text-glow-lime absolute top-[10%] right-[4%] hidden rotate-2 text-base font-bold tracking-widest italic opacity-90 md:block lg:text-lg">
+      {/* Extra neon signage — the plate carries "WALL STREET IS OBSOLETE" and
+          "ROBINHOOD CHAIN" already; this one is layered in since it isn't. */}
+      <div className="font-display text-glow-lime absolute top-[8%] right-[4%] hidden rotate-2 text-base font-bold tracking-widest italic opacity-90 md:block lg:text-lg">
         IN $VLAD WE TRUST
       </div>
 

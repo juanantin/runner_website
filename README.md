@@ -66,29 +66,30 @@ Everything that needs to change before launch is centralized in
 | Social links | `social.x`, `social.telegram` | Used in the header, footer, and dashboard panel. |
 | Newsletter endpoint | `newsletterEndpoint` | `NewsletterForm.tsx` POSTs `{ email }` as JSON here. Currently a placeholder path (`/api/newsletter`) with no backend — wire it up to a real provider (Mailchimp, Beehiiv, ConvertKit, a Next.js route handler, etc). The form doesn't currently fail loudly if the request 404s, since there's nothing behind it yet. |
 
-## Art direction / placeholder assets
+## Art direction / assets
 
-The brief calls for `hero-city.webp`, `hooded-runner.webp`,
-`trailer-thumbnail.webp`, `city-texture.webp`, and `grain.png`. Rather than
-ship binary placeholder images, the equivalent art is built procedurally:
-
-- **Skyline, hooded silhouette, flying vehicles** — hand-built SVG in
-  `src/components/HeroBackdrop.tsx`. Window lighting uses a deterministic
-  formula (not `Math.random`) so server and client render identically.
+- `src/assets/hero-city.jpg` — the cinematic rainy-city/hooded-protagonist
+  plate. Used as the hero background (`Hero.tsx`) and, cropped to the
+  figure, as the trailer thumbnail (`TokenDashboard.tsx`). Both are static
+  `next/image` imports, so Next.js generates optimized/responsive variants
+  automatically.
+- `src/assets/logo-mark.png` — the VLAD (red) / RUNNER (green) wordmark,
+  cropped to its content bounding box with the original alpha channel
+  preserved so it drops cleanly onto the near-black theme. Rendered via
+  `Logo.tsx` in the header and footer.
 - **Film grain** — an inline SVG `feTurbulence` filter in `globals.css`
-  (`.film-grain`), animated with `steps()` keyframes. No image request, no
-  banding.
-- **Rain** — a repeating CSS gradient (`.rain-layer`).
+  (`.film-grain`), animated with `steps()` keyframes. No extra image
+  request, no banding.
+- **Rain** — a repeating CSS gradient (`.rain-layer`), layered at low
+  opacity over the hero photo (which already has rain baked in) for a
+  little extra motion.
 - **Scanlines / CRT flicker / neon glow / chromatic aberration hover** — all
   CSS, see `globals.css`.
 
-This keeps the page fast and dependency-free while still matching the
-"fallback gradients so the layout still works before final images are
-supplied" requirement — arguably permanently, since there's no image to load
-in the first place. When final cinematic plates are ready, they can replace
-the `<Skyline/>` / `<HoodedSilhouette/>` layers in `HeroBackdrop.tsx` (e.g.
-swap in a `next/image` background) without touching the surrounding
-Framer Motion parallax wrapper in `Hero.tsx`.
+Swap `src/assets/hero-city.jpg` or `src/assets/logo-mark.png` for a new file
+of the same name to update the art without touching component code — the
+surrounding Framer Motion parallax wrapper in `Hero.tsx` doesn't need to
+change.
 
 ## Accessibility
 
