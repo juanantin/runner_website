@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Feather, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 import { XLogo, TelegramLogo } from "./icons";
 import { navLinks, siteConfig } from "@/lib/site-config";
@@ -70,13 +70,6 @@ export default function Header() {
               className="hairline flex h-9 w-9 items-center justify-center rounded-full text-foreground/80 transition-colors hover:border-lime-400/60 hover:text-lime-400"
             >
               <TelegramLogo className="h-4 w-4" />
-            </a>
-            <a
-              href="#tokenomics"
-              aria-label="Built on Robinhood Chain"
-              className="hairline flex h-9 w-9 items-center justify-center rounded-full text-foreground/80 transition-colors hover:border-lime-400/60 hover:text-lime-400"
-            >
-              <Feather className="h-4 w-4" />
             </a>
           </div>
 
