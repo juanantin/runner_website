@@ -31,15 +31,17 @@ export default function Hero() {
       className="relative flex min-h-[85vh] items-center overflow-hidden border-b border-lime-400/10 pt-16"
     >
       {/* Background plate: rainy cyberpunk skyline + hooded protagonist */}
-      <motion.div style={{ y: citySlow }} className="absolute inset-0 scale-110">
-        <Image
-          src={heroCity}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[72%_center] sm:object-[62%_center] lg:object-[50%_center]"
-        />
+      <motion.div style={{ y: citySlow }} className="absolute inset-0 overflow-hidden">
+        <div className="ken-burns absolute inset-0">
+          <Image
+            src={heroCity}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[72%_center] sm:object-[62%_center] lg:object-[50%_center]"
+          />
+        </div>
       </motion.div>
 
       {/* Legibility scrims over the photo plate */}
@@ -61,12 +63,6 @@ export default function Hero() {
         className="rain-layer pointer-events-none absolute inset-0 opacity-20"
       />
 
-      {/* Extra neon signage — the plate carries "WALL STREET IS OBSOLETE" and
-          "ROBINHOOD CHAIN" already; this one is layered in since it isn't. */}
-      <div className="font-display text-glow-lime absolute top-[8%] right-[4%] hidden rotate-2 text-base font-bold tracking-widest italic opacity-90 md:block lg:text-lg">
-        IN $VLAD WE TRUST
-      </div>
-
       <motion.div
         style={{ opacity: contentFade }}
         className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
@@ -81,7 +77,7 @@ export default function Hero() {
               src={logoMark}
               alt="Vlad Runner"
               priority
-              className="h-auto w-full max-w-md drop-shadow-[0_0_20px_rgba(182,255,60,0.3)] sm:max-w-lg md:max-w-xl"
+              className="glow-breathe h-auto w-full max-w-md sm:max-w-lg md:max-w-xl"
             />
           </motion.h1>
 
@@ -113,7 +109,7 @@ export default function Hero() {
           >
             <a
               href={siteConfig.buyLink}
-              className="border-glow-lime group inline-flex items-center gap-2 rounded-sm border bg-lime-400/10 px-6 py-3 font-mono text-sm font-semibold tracking-[0.2em] text-lime-300 uppercase transition-transform hover:-translate-y-0.5"
+              className="glow-pulse-box group inline-flex items-center gap-2 rounded-sm border border-lime-400/55 bg-lime-400/10 px-6 py-3 font-mono text-sm font-semibold tracking-[0.2em] text-lime-300 uppercase transition-transform hover:-translate-y-0.5"
             >
               Buy {siteConfig.ticker}
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -136,16 +132,16 @@ export default function Hero() {
           >
             <ContractCopy />
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.85 }}
-            className="mt-5"
-          >
-            <NetworkStatus />
-          </motion.div>
         </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.85 }}
+        className="absolute right-4 bottom-6 z-10 sm:right-6 lg:right-8"
+      >
+        <NetworkStatus />
       </motion.div>
     </section>
   );

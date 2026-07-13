@@ -21,7 +21,7 @@ export default function CreditsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
-          className="font-display text-glow-lime mx-auto max-w-3xl text-center text-3xl font-bold tracking-wide italic sm:text-4xl"
+          className="font-display text-glow-breathe mx-auto max-w-3xl text-center text-3xl font-bold tracking-wide text-lime-400 italic sm:text-4xl"
         >
           A Narrative By The People, For The People
         </motion.h2>

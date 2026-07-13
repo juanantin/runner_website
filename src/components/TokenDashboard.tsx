@@ -30,7 +30,7 @@ export default function TokenDashboard() {
         <p className="mb-2 text-center font-mono text-xs tracking-[0.3em] text-olive-500 uppercase">
           Dashboard
         </p>
-        <h2 className="font-display text-glow-lime mb-16 text-center text-3xl font-bold tracking-wide italic sm:text-4xl">
+        <h2 className="font-display text-glow-breathe mb-16 text-center text-3xl font-bold tracking-wide text-lime-400 italic sm:text-4xl">
           Everything You Need To Run With The Hood
         </h2>
 
@@ -143,7 +143,7 @@ export default function TokenDashboard() {
                 aria-hidden="true"
                 className="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-void/20"
               />
-              <span className="border-glow-lime relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-void/60 text-lime-400 transition-transform group-hover:scale-110">
+              <span className="glow-pulse-box float-slow relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-lime-400/55 bg-void/60 text-lime-400 transition-transform group-hover:scale-110">
                 <Play className="ml-1 h-5 w-5" fill="currentColor" />
               </span>
               <span className="relative z-10 font-mono text-xs tracking-[0.25em] text-foreground/70 uppercase">
