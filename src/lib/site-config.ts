@@ -30,10 +30,8 @@ export const siteConfig = {
   },
 
   social: {
-    // TODO: replace with the real X (Twitter) profile.
-    x: "https://x.com/",
-    // TODO: replace with the real Telegram invite link.
-    telegram: "https://t.me/",
+    x: "https://x.com/VladRunnerHood",
+    telegram: "https://t.me/vladrunner_portal",
   },
 
   // TODO: wire this up to a real email provider (Mailchimp, Beehiiv,

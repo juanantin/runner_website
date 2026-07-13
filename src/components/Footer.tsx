@@ -26,7 +26,6 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-2">
-            {/* TODO: replace with the real X (Twitter) profile. */}
             <a
               href={siteConfig.social.x}
               target="_blank"
@@ -36,7 +35,6 @@ export default function Footer() {
             >
               <XLogo className="h-4 w-4" />
             </a>
-            {/* TODO: replace with the real Telegram invite link. */}
             <a
               href={siteConfig.social.telegram}
               target="_blank"

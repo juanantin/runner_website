@@ -92,7 +92,6 @@ export default function TokenDashboard() {
           <Panel index={3}>
             <PanelHeading>Join The Crew</PanelHeading>
             <div className="mt-5 flex items-center gap-3">
-              {/* TODO: replace with the real X (Twitter) profile. */}
               <a
                 href={siteConfig.social.x}
                 target="_blank"
@@ -102,7 +101,6 @@ export default function TokenDashboard() {
               >
                 <XLogo className="h-[18px] w-[18px]" />
               </a>
-              {/* TODO: replace with the real Telegram invite link. */}
               <a
                 href={siteConfig.social.telegram}
                 target="_blank"
