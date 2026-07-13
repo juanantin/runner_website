@@ -60,11 +60,12 @@ Everything that needs to change before launch is centralized in
 
 | Value | Field | Notes |
 |---|---|---|
-| Contract address | `contractAddress`, `contractAddressFull` | The short form is shown in the UI; the full form is what gets copied to the clipboard. |
+| Contract address | `contractAddress`, `contractAddressFull` | Real deployed address. The short form (`0x1F6e...58d1`) is shown in the UI; the full form is what gets copied to the clipboard. |
 | Buy link | `buyLink` | Point at your DEX/aggregator swap URL. |
 | Trailer video | `trailerVideoUrl` | Currently `/videos/runner-trailer.mp4` (`public/videos/runner-trailer.mp4`), played inline in `TrailerSection.tsx` right after the hero. |
 | Explorer link | `explorerLink` | Block explorer token page. |
 | Social links | `social.x`, `social.telegram` | Used in the header, footer, and dashboard panel. |
+| Bullshot link | `bullshotUrl` | Token safety-scan badge (`src/assets/bullshot-badge.webp`) pinned to the hero's lower-right, above the network status. Links to the Bullshot report page for `contractAddressFull`. |
 
 ## Art direction / assets
 
@@ -80,6 +81,8 @@ Everything that needs to change before launch is centralized in
   faststart-remuxed for progressive playback. Lives in `public/` (not
   `src/assets/`) since `<video>` needs a plain URL rather than a
   next/image-style static import. Played inline in `TrailerSection.tsx`.
+- `src/assets/bullshot-badge.webp` — the Bullshot safety-scan logo, shown
+  as a clickable badge in the hero's lower-right (`Hero.tsx`).
 - **Film grain** — an inline SVG `feTurbulence` filter in `globals.css`
   (`.film-grain`), animated with `steps()` keyframes. No extra image
   request, no banding.

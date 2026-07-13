@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import heroCity from "@/assets/hero-city.jpg";
 import logoMark from "@/assets/logo-mark.png";
+import bullshotBadge from "@/assets/bullshot-badge.webp";
 import ContractCopy from "./ContractCopy";
 import NetworkStatus from "./NetworkStatus";
 import { siteConfig } from "@/lib/site-config";
@@ -118,8 +119,21 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.85 }}
-        className="absolute right-4 bottom-6 z-10 sm:right-6 lg:right-8"
+        className="absolute right-4 bottom-6 z-10 flex flex-col items-end gap-2 sm:right-6 lg:right-8"
       >
+        <a
+          href={siteConfig.bullshotUrl}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="View Vlad Runner's Bullshot safety scan"
+          className="hairline flex items-center rounded-sm bg-void-raised/70 px-3 py-2 backdrop-blur-sm transition-colors hover:border-lime-400/60"
+        >
+          <Image
+            src={bullshotBadge}
+            alt="Bullshot"
+            className="h-4 w-auto sm:h-[18px]"
+          />
+        </a>
         <NetworkStatus />
       </motion.div>
     </section>

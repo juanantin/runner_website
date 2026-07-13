@@ -7,10 +7,8 @@ export const siteConfig = {
   tagline: "THE FUTURE IS HOODED.",
   network: "LIVE ON ROBINHOOD CHAIN",
 
-  // TODO: replace with the real deployed contract address.
-  contractAddress: "0xVLAD...RUNNER",
-  contractAddressFull:
-    "0xVLAD0000000000000000000000000000000RUNNER",
+  contractAddress: "0x1F6e...58d1",
+  contractAddressFull: "0x1F6ec2A069B2809738ADF282e8d2Ff65707b58d1",
 
   // TODO: point at the live DEX/aggregator swap link.
   buyLink: "#buy",
@@ -19,6 +17,9 @@ export const siteConfig = {
 
   // TODO: point at the real block explorer token page.
   explorerLink: "#",
+
+  bullshotUrl:
+    "https://bullshot.io/tokens/0x1F6ec2A069B2809738ADF282e8d2Ff65707b58d1",
 
   tokenInfo: {
     name: "Vlad Runner",
