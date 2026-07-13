@@ -10,8 +10,8 @@ export const siteConfig = {
   contractAddress: "0x1F6e...58d1",
   contractAddressFull: "0x1F6ec2A069B2809738ADF282e8d2Ff65707b58d1",
 
-  // TODO: point at the live DEX/aggregator swap link.
-  buyLink: "#buy",
+  buyLink:
+    "https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0x1f6ec2a069b2809738adf282e8d2ff65707b58d1",
 
   trailerVideoUrl: "/videos/runner-trailer.mp4",
 

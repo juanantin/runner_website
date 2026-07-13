@@ -97,6 +97,8 @@ export default function Hero() {
           >
             <a
               href={siteConfig.buyLink}
+              target="_blank"
+              rel="noreferrer noopener"
               className="glow-pulse-box group inline-flex items-center gap-2 rounded-sm border border-lime-400/55 bg-lime-400/10 px-6 py-3 font-mono text-sm font-semibold tracking-[0.2em] text-lime-300 uppercase transition-transform hover:-translate-y-0.5"
             >
               Buy {siteConfig.ticker}

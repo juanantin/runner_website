@@ -75,6 +75,8 @@ export default function Header() {
 
           <a
             href={siteConfig.buyLink}
+            target="_blank"
+            rel="noreferrer noopener"
             className="border-glow-lime hidden rounded-sm border px-4 py-2 font-mono text-xs font-semibold tracking-[0.2em] text-lime-400 uppercase transition-transform hover:-translate-y-0.5 sm:inline-block"
           >
             Buy {siteConfig.ticker}
@@ -119,6 +121,8 @@ export default function Header() {
               ))}
               <a
                 href={siteConfig.buyLink}
+                target="_blank"
+                rel="noreferrer noopener"
                 onClick={() => setOpen(false)}
                 className="border-glow-lime mt-2 rounded-sm border px-3 py-3 text-center font-mono text-sm font-semibold tracking-[0.2em] text-lime-400 uppercase"
               >
