@@ -23,7 +23,7 @@ export default function CreditsSection() {
           transition={{ duration: 0.6 }}
           className="font-display text-glow-breathe mx-auto max-w-3xl text-center text-3xl font-bold tracking-wide text-lime-400 italic sm:text-4xl"
         >
-          A Narrative By The People, For The People
+          Legends don&rsquo;t die. They decentralize.
         </motion.h2>
 
         {/* Mobile / tablet: slow horizontal snap-scroll of stacked cards */}
