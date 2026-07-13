@@ -61,7 +61,7 @@ Everything that needs to change before launch is centralized in
 |---|---|---|
 | Contract address | `contractAddress`, `contractAddressFull` | The short form is shown in the UI; the full form is what gets copied to the clipboard. |
 | Buy link | `buyLink` | Point at your DEX/aggregator swap URL. |
-| Trailer video | `trailerVideoUrl` | Leave empty to show the "Coming Soon" placeholder in the modal; set to an MP4 URL to embed a real `<video>`. |
+| Trailer video | `trailerVideoUrl` | Currently `/videos/runner-trailer.mp4` (`public/videos/runner-trailer.mp4`), played inline in `TrailerSection.tsx` right after the hero and in the dashboard's trailer modal. Leave empty to fall back to the "Coming Soon" placeholder instead. |
 | Explorer link | `explorerLink` | Block explorer token page. |
 | Social links | `social.x`, `social.telegram` | Used in the header, footer, and dashboard panel. |
 
@@ -75,7 +75,12 @@ Everything that needs to change before launch is centralized in
 - `src/assets/logo-mark.png` — the VLAD (red) / RUNNER (green) wordmark,
   cropped to its content bounding box with the original alpha channel
   preserved so it drops cleanly onto the near-black theme. Rendered via
-  `Logo.tsx` in the header and footer.
+  `Logo.tsx` in the header, footer, and hero title.
+- `public/videos/runner-trailer.mp4` — the official trailer, H.264/AAC,
+  faststart-remuxed for progressive playback. Lives in `public/` (not
+  `src/assets/`) since `<video>` needs a plain URL rather than a
+  next/image-style static import. Played inline in `TrailerSection.tsx`
+  and in the dashboard's trailer modal.
 - **Film grain** — an inline SVG `feTurbulence` filter in `globals.css`
   (`.film-grain`), animated with `steps()` keyframes. No extra image
   request, no banding.

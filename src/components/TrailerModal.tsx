@@ -86,27 +86,29 @@ export default function TrailerModal() {
               id="trailer-modal-title"
               className="font-display text-glow-orange mt-2 text-4xl font-bold italic"
             >
-              Coming Soon
+              {siteConfig.trailerVideoUrl ? "Watch Now" : "Coming Soon"}
             </h2>
 
             {siteConfig.trailerVideoUrl ? (
               <video
                 controls
+                playsInline
                 className="mt-6 aspect-video w-full rounded-sm bg-black"
                 src={siteConfig.trailerVideoUrl}
               />
             ) : (
-              <div className="hairline mt-6 flex aspect-video w-full items-center justify-center rounded-sm bg-gradient-to-br from-hood-900 to-void">
-                <span className="border-glow-lime flex h-16 w-16 items-center justify-center rounded-full text-lime-400">
-                  <Play className="ml-1 h-6 w-6" fill="currentColor" />
-                </span>
-              </div>
+              <>
+                <div className="hairline mt-6 flex aspect-video w-full items-center justify-center rounded-sm bg-gradient-to-br from-hood-900 to-void">
+                  <span className="border-glow-lime flex h-16 w-16 items-center justify-center rounded-full text-lime-400">
+                    <Play className="ml-1 h-6 w-6" fill="currentColor" />
+                  </span>
+                </div>
+                <p className="mt-6 font-mono text-sm leading-relaxed text-foreground/75">
+                  The Hood is being cut in the editing room. Follow the crew
+                  so you don&rsquo;t miss the premiere.
+                </p>
+              </>
             )}
-
-            <p className="mt-6 font-mono text-sm leading-relaxed text-foreground/75">
-              The Hood is being cut in the editing room. Follow the crew so
-              you don&rsquo;t miss the premiere.
-            </p>
           </motion.div>
         </motion.div>
       )}

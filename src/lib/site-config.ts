@@ -15,8 +15,7 @@ export const siteConfig = {
   // TODO: point at the live DEX/aggregator swap link.
   buyLink: "#buy",
 
-  // TODO: point at the final cut once it's edited.
-  trailerVideoUrl: "",
+  trailerVideoUrl: "/videos/runner-trailer.mp4",
 
   // TODO: point at the real block explorer token page.
   explorerLink: "#",
