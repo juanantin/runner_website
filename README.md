@@ -62,6 +62,7 @@ Everything that needs to change before launch is centralized in
 |---|---|---|
 | Contract address | `contractAddress`, `contractAddressFull` | Real deployed address. The short form (`0x1F6e...58d1`) is shown in the UI; the full form is what gets copied to the clipboard. |
 | Buy link | `buyLink` | Uniswap swap deep link for the token on Robinhood Chain. |
+| Chart link | `chartUrl` | DexScreener chart, linked from the hero's "View Chart" button. |
 | Trailer video | `trailerVideoUrl` | Currently `/videos/runner-trailer.mp4` (`public/videos/runner-trailer.mp4`), played inline in `TrailerSection.tsx` right after the hero. |
 | Explorer link | `explorerLink` | Block explorer token page. |
 | Social links | `social.x`, `social.telegram` | Used in the header, footer, and dashboard panel. |

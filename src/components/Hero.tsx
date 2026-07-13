@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CandlestickChart } from "lucide-react";
 import heroCity from "@/assets/hero-city.jpg";
 import logoMark from "@/assets/logo-mark.png";
 import bullshotBadge from "@/assets/bullshot-badge.webp";
@@ -103,6 +103,15 @@ export default function Hero() {
             >
               Buy {siteConfig.ticker}
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            <a
+              href={siteConfig.chartUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="hairline chromatic-hover inline-flex items-center gap-2 rounded-sm px-6 py-3 font-mono text-sm font-semibold tracking-[0.2em] text-foreground uppercase transition-colors hover:border-orange-500/60 hover:text-orange-500"
+            >
+              View Chart
+              <CandlestickChart className="h-4 w-4" />
             </a>
           </motion.div>
 

@@ -13,6 +13,9 @@ export const siteConfig = {
   buyLink:
     "https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0x1f6ec2a069b2809738adf282e8d2ff65707b58d1",
 
+  chartUrl:
+    "https://dexscreener.com/robinhood/0x68994533f83d4BFFf53BDD1088100EC6Fb2EB225",
+
   trailerVideoUrl: "/videos/runner-trailer.mp4",
 
   // TODO: point at the real block explorer token page.
